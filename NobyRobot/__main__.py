@@ -90,7 +90,7 @@ NEKO_STICKERS = (
     "CAACAgUAAxkBAAIIUWNL5tVBEQAB2gWLSq0ymEPeAj5kmQAC3QEAAuu92VSPj3UkCiNvfioE",
 )
 
-PM_START_TEXT = """
+PM_START_TEXT = 
 ────「 [{}](https://telegra.ph/file/9996ec2eafdef4692102d.jpg) 」────
 *Hola! {},*
 *Meow Meow, Don't Touch Me Without My Permission!*
@@ -99,7 +99,7 @@ PM_START_TEXT = """
 ❍ `{}` *Users, Across* `{}` *Chats.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Guidelines Button Below To Know My Abilities ××
-"""
+
 
 buttons = [
     [
