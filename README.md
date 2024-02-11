@@ -58,7 +58,7 @@ The Support group can be reached out to at [Programmer • Support](https://tele
 </p>
 
 ```console
-    ~$ git clone https://github.com/Awesome-Prince/NobyRobot-3.git
+    ~$ git clone https://github.com/Noby007/Nobydayanairobot.git
     ~$ cd NobyRobot
     ~$ cp sample_config.py config.py
 ```
