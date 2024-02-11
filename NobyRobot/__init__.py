@@ -329,7 +329,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from NobyRobot.modules.helper_funcs.handlers import (
+"""from NobyRobot.modules.helper_funcs.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
@@ -338,6 +338,6 @@ from NobyRobot.modules.helper_funcs.handlers import (
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
-tg.MessageHandler = CustomMessageHandler
+tg.MessageHandler = CustomMessageHandler"""
 
 LOGGER.info("[NobyRobot IS READY]")

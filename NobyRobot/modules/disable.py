@@ -8,7 +8,7 @@ from telegram.utils.helpers import escape_markdown
 from NobyRobot import NEKO_PTB
 from NobyRobot.modules.connection import connected
 from NobyRobot.modules.helper_funcs.alternate import send_message, typing_action
-from NobyRobot.modules.helper_funcs.handlers import CMD_STARTERS
+
 from NobyRobot.modules.helper_funcs.misc import is_module_loaded
 from NobyRobot.modules.language import gs
 

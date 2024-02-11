@@ -15,7 +15,6 @@ from NobyRobot.modules.helper_funcs.alternate import send_message, typing_action
 from NobyRobot.modules.helper_funcs.chat_status import user_admin
 from NobyRobot.modules.helper_funcs.extraction import extract_text
 from NobyRobot.modules.helper_funcs.filters import CustomFilters
-from NobyRobot.modules.helper_funcs.handlers import MessageHandlerChecker
 from NobyRobot.modules.helper_funcs.misc import build_keyboard_parser
 from NobyRobot.modules.helper_funcs.msg_types import get_filter_type
 from NobyRobot.modules.helper_funcs.string_handling import (

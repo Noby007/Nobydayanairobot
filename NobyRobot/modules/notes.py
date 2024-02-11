@@ -26,7 +26,6 @@ import NobyRobot.modules.sql.notes_sql as sql
 from NobyRobot import DRAGONS, JOIN_LOGGER, LOGGER, NEKO_PTB, SUPPORT_CHAT
 from NobyRobot.modules.disable import DisableAbleCommandHandler
 from NobyRobot.modules.helper_funcs.chat_status import connection_status, user_admin
-from NobyRobot.modules.helper_funcs.handlers import MessageHandlerChecker
 from NobyRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
 from NobyRobot.modules.helper_funcs.msg_types import get_note_type
 from NobyRobot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
