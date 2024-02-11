@@ -1,5 +1,5 @@
 # Corrected import statement
-import pyrate_limiter
+import pyrate_limiter.py
 
 # Accessing required classes from pyrate_limiter module
 BucketFullException = pyrate_limiter.BucketFullException
