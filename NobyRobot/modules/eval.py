@@ -3,7 +3,7 @@ BSD 2-Clause License
 
 Copyright (C) 2017-2019, Paul Larsen
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Awesome-Prince ]
-Copyright (c) 2022-2023, Programmer • Network, [ https://github.com/Awesome-Prince/NobyRobot-3 ]
+Copyright (c) 2022-2023, Programmer • Network, [https://github.com/Noby007/Nobydayanairobot ]
 
 All rights reserved.
 

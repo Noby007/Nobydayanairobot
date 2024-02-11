@@ -2,7 +2,7 @@
 BSD 2-Clause License
 Copyright (C) 2017-2019, Paul Larsen
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Awesome-Prince]
-Copyright (c) 2022-2023, Programmer Network, [ https://github.com/Awesome-Prince/NobyRobot-3 ]
+Copyright (c) 2022-2023, Programmer Network, [https://github.com/Noby007/Nobydayanairobot ]
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -39,7 +39,7 @@ async def awake(event):
 「@NekoCuteBot」
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 Here is the Repo Deploy your Own NobyRobot.
-⚜️Repo ➤ https://github.com/Awesome-Prince/NobyRobot-3.git
+⚜️Repo ➤https://github.com/Noby007/Nobydayanairobot.git
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 🔰 Thanks for your support 
 It's Fully stable Repo so you can deploy and make own Bot.
