@@ -112,7 +112,7 @@ buttons = [
     [
         InlineKeyboardButton(text="📓 Guidelines", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Source 🌐", url="https://github.com/Awesome-Prince/NobyRobot-3.git"
+            text="Source 🌐", url="https://github.com/Noby007/NobyRobot-3.git"
         ),
     ],
     [

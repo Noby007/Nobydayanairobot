@@ -236,7 +236,7 @@ print(
     "[NobyRobot] Mewo Mewo! Successfully Connected With Programmer • Data Center • Chennai"
 )
 print(
-    "[NobyRobot] Project Maintained By: github.com/Awesome-Prince (https://github.com/Awesome-Prince/NobyRobot-3)"
+    "[NobyRobot] Project Maintained By: github.com/Awesome-Prince (https://github.com/Noby007/NobyRobot-3)"
 )
 
 print("[NobyRobot]: Telegraph Installing")
