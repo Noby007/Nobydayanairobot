@@ -1,10 +1,13 @@
-from pyrate_limiter import (
-    BucketFullException,
-    Duration,
-    Limiter,
-    MemoryListBucket,
-    RequestRate,
-)
+# Corrected import statement
+import pyrate_limiter
+
+# Accessing required classes from pyrate_limiter module
+BucketFullException = pyrate_limiter.BucketFullException
+Duration = pyrate_limiter.Duration
+Limiter = pyrate_limiter.Limiter
+MemoryListBucket = pyrate_limiter.MemoryListBucket
+RequestRate = pyrate_limiter.RequestRate
+
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
 
