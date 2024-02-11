@@ -142,17 +142,17 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
 
     text = (
         f"<b>Information:</b>\n"
-        f"• ID: <code>{user.id}</code>\n"
-        f"• First Name: {html.escape(user.first_name)}"
+        f"    ID: <code>{user.id}</code>\n"
+        f"    First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n• Last Name: {html.escape(user.last_name)}"
+        text += f"\n    Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n• Username: @{html.escape(user.username)}"
+        text += f"\n    Username: @{html.escape(user.username)}"
 
-    text += f"\n• Permanent user link: {mention_html(user.id, 'link')}"
+    text += f"\n    Permanent user link: {mention_html(user.id, 'link')}"
 
     nation_level_present = False
 
@@ -180,16 +180,16 @@ def inlineinfo(query: str, update: Update, context: CallbackContext) -> None:
 
     try:
         if spamwtc := sw.get_ban(int(user.id)):
-            text += "<b>\n\n• SpamWatched:\n</b> Yes"
-            text += f"\n• Reason: <pre>{spamwtc.reason}</pre>"
-            text += "\n• Appeal at @SpamWatchSupport"
+            text += "<b>\n\n    SpamWatched:\n</b> Yes"
+            text += f"\n    Reason: <pre>{spamwtc.reason}</pre>"
+            text += "\n    Appeal at @SpamWatchSupport"
         else:
-            text += "<b>\n\n• SpamWatched:</b> No"
+            text += "<b>\n\n    SpamWatched:</b> No"
     except:
         pass  # don't crash if api is down somehow...
 
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\n• <b>Chat count</b>: <code>{num_chats}</code>"
+    text += f"\n    <b>Chat count</b>: <code>{num_chats}</code>"
 
     kb = InlineKeyboardMarkup(
         [
@@ -287,35 +287,35 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
         response = a["success"]
         if response is True:
             date = a["results"]["last_updated"]
-            stats = f"*◢ Intellivoid• SpamProtection Info*:\n"
-            stats += f' • *Updated on*: `{datetime.fromtimestamp(date).strftime("%Y-%m-%d %I:%M:%S %p")}`\n'
+            stats = f"*◢ Intellivoid    SpamProtection Info*:\n"
+            stats += f'     *Updated on*: `{datetime.fromtimestamp(date).strftime("%Y-%m-%d %I:%M:%S %p")}`\n'
 
             if a["results"]["attributes"]["is_potential_spammer"] is True:
-                stats += f" • *User*: `USERxSPAM`\n"
+                stats += f"     *User*: `USERxSPAM`\n"
             elif a["results"]["attributes"]["is_operator"] is True:
-                stats += f" • *User*: `USERxOPERATOR`\n"
+                stats += f"     *User*: `USERxOPERATOR`\n"
             elif a["results"]["attributes"]["is_agent"] is True:
-                stats += f" • *User*: `USERxAGENT`\n"
+                stats += f"     *User*: `USERxAGENT`\n"
             elif a["results"]["attributes"]["is_whitelisted"] is True:
-                stats += f" • *User*: `USERxWHITELISTED`\n"
+                stats += f"     *User*: `USERxWHITELISTED`\n"
 
-            stats += f' • *Type*: `{a["results"]["entity_type"]}`\n'
+            stats += f'     *Type*: `{a["results"]["entity_type"]}`\n'
             stats += (
-                f' • *Language*: `{a["results"]["language_prediction"]["language"]}`\n'
+                f'     *Language*: `{a["results"]["language_prediction"]["language"]}`\n'
             )
-            stats += f' • *Language Probability*: `{a["results"]["language_prediction"]["probability"]}`\n'
+            stats += f'     *Language Probability*: `{a["results"]["language_prediction"]["probability"]}`\n'
             stats += f"*Spam Prediction*:\n"
-            stats += f' • *Ham Prediction*: `{a["results"]["spam_prediction"]["ham_prediction"]}`\n'
-            stats += f' • *Spam Prediction*: `{a["results"]["spam_prediction"]["spam_prediction"]}`\n'
+            stats += f'     *Ham Prediction*: `{a["results"]["spam_prediction"]["ham_prediction"]}`\n'
+            stats += f'     *Spam Prediction*: `{a["results"]["spam_prediction"]["spam_prediction"]}`\n'
             stats += (
                 f'*Blacklisted*: `{a["results"]["attributes"]["is_blacklisted"]}`\n'
             )
             if a["results"]["attributes"]["is_blacklisted"] is True:
                 stats += (
-                    f' • *Reason*: `{a["results"]["attributes"]["blacklist_reason"]}`\n'
+                    f'     *Reason*: `{a["results"]["attributes"]["blacklist_reason"]}`\n'
                 )
                 stats += (
-                    f' • *Flag*: `{a["results"]["attributes"]["blacklist_flag"]}`\n'
+                    f'     *Flag*: `{a["results"]["attributes"]["blacklist_flag"]}`\n'
                 )
             stats += f'*PTID*:\n`{a["results"]["private_telegram_id"]}`\n'
 

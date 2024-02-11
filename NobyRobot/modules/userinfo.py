@@ -155,8 +155,8 @@ def get_id(update: Update, context: CallbackContext):
 
             msg.reply_text(
                 f"<b>Telegram ID:</b>,"
-                f"• {html.escape(user2.first_name)} - <code>{user2.id}</code>.\n"
-                f"• {html.escape(user1.first_name)} - <code>{user1.id}</code>.",
+                f"    {html.escape(user2.first_name)} - <code>{user2.id}</code>.\n"
+                f"    {html.escape(user1.first_name)} - <code>{user1.id}</code>.",
                 parse_mode=ParseMode.HTML,
             )
 
@@ -215,7 +215,7 @@ async def group_info(event) -> None:
     msg += f"\n`Users`: `{totallist.total}`"
     msg += "\n\n**Admins List:**"
     for x in totallist:
-        msg += f"\n• [{x.id}](tg://user?id={x.id})"
+        msg += f"\n    [{x.id}](tg://user?id={x.id})"
     msg += f"\n\n**Description**:\n`{ch_full.full_chat.about}`"
     await event.reply(msg)
 
@@ -271,21 +271,21 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b>• Appraisal results •</b> 」\n"
-        f"• ID: <code>{user.id}</code>\n"
-        f"• First Name: {html.escape(user.first_name)}"
+        f"╒═══「<b>    Appraisal results    </b> 」\n"
+        f"    ID: <code>{user.id}</code>\n"
+        f"    First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n• Last Name: {html.escape(user.last_name)}"
+        text += f"\n    Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n• Username: @{html.escape(user.username)}"
+        text += f"\n    Username: @{html.escape(user.username)}"
 
-    text += f"\n• Userlink: {mention_html(user.id, 'link')}"
+    text += f"\n    Userlink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n• Presence: <code>{}</code>"
+        _stext = "\n    Presence: <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -459,7 +459,7 @@ def stats(update, context):
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
             + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/Programmer_Updates)\n\n"
-            + "\n╘══「 by [Programmer • Network](https://t.me/Programmer_Network) 」\n",
+            + "\n╘══「 by [Programmer     Network](https://t.me/Programmer_Network) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -481,7 +481,7 @@ def stats(update, context):
                     )
                     + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/Programmer_Updates)\n\n"
                 )
-                + "╘══「 by [Programmer • Network](https://t.me/Programmer_Network) 」\n"
+                + "╘══「 by [Programmer     Network](https://t.me/Programmer_Network) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -583,41 +583,41 @@ def __user_info__(user_id):
 
 __help__ = """
 *ID:*
- • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
- • `/gifid`*:* reply to a gif to me to tell you its file ID.
+     `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
+     `/gifid`*:* reply to a gif to me to tell you its file ID.
  
 *Self addded information:* 
- • `/setme <text>`*:* will set your info
- • `/me`*:* will get your or another user's info.
+     `/setme <text>`*:* will set your info
+     `/me`*:* will get your or another user's info.
 Examples:
  `/setme I am a wolf.`
  `/me @username(defaults to yours if no user specified)`
  
 *Information others add on you:* 
- • `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
-• `/setbio <text>`*:* while replying, will save another user's bio 
+     `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
+    `/setbio <text>`*:* while replying, will save another user's bio 
 Examples:
  `/bio @username(defaults to yours if not specified).`
  `/setbio This user is a wolf` (reply to the user)
  
 *Overall Information about you:*
- • `/info`*:* get information about a user. 
+     `/info`*:* get information about a user. 
  
 *◢ Intellivoid SpamProtection:*
- • `/spwinfo`*:* SpamProtection Info
+     `/spwinfo`*:* SpamProtection Info
  
 *json Detailed info:*
- • `/json`*:* Get Detailed info about any message.
+     `/json`*:* Get Detailed info about any message.
  
 *Covid info:*
- • `/covid`*:* Get Detailed info about Covid.
+     `/covid`*:* Get Detailed info about Covid.
  
 *ARQ Statistics:*
  /arq : ARQ API Stats.
  
 *AFk:*
 When marked as AFK, any mentions will be replied to with a message stating that you're not available!
- • `/afk <reason>`*:* Mark yourself as AFK.
+     `/afk <reason>`*:* Mark yourself as AFK.
   - brb <reason>: Same as the afk command, but not a command.\n 
   
 """

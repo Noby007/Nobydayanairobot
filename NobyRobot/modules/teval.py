@@ -39,7 +39,7 @@ async def eval(event):
         evaluation = stdout
     else:
         evaluation = "Success"
-    final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
+    final_output = f"**     Eval : **\n`{cmd}` \n\n**     Result : **\n`{evaluation}` \n"
     MAX_MESSAGE_SIZE_LIMIT = 4095
     if len(final_output) > MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:

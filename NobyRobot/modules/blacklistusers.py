@@ -102,10 +102,10 @@ def bl_users(update: Update, context: CallbackContext):
         user = bot.get_chat(each_user)
         if reason := sql.get_reason(each_user):
             users.append(
-                f"• {mention_html(user.id, html.escape(user.first_name))} :- {reason}"
+                f"    {mention_html(user.id, html.escape(user.first_name))} :- {reason}"
             )
         else:
-            users.append(f"• {mention_html(user.id, html.escape(user.first_name))}")
+            users.append(f"    {mention_html(user.id, html.escape(user.first_name))}")
 
     message = "<b>Blacklisted Users</b>\n" + (
         "\n".join(users) if users else "Noone is being ignored as of yet."

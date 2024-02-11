@@ -447,5 +447,5 @@ async def q(event):
 __mod_name__ = "Quotly"
 
 __help__ = """
-• /q *:* To quote a message.
+    /q *:* To quote a message.
 """

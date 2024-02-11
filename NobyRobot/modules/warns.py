@@ -88,16 +88,16 @@ def warn(
             chat.unban_member(user.id)
             reply = (
                 f"<code>❕</code><b>Punch Event</b>\n"
-                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<code> </code><b>•  Count:</b> {limit}"
+                f"<code> </code><b>     User:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><b>     Count:</b> {limit}"
             )
 
         else:  # ban
             Chat.ban_member(user.id)
             reply = (
                 f"<code>❕</code><b>Ban Event</b>\n"
-                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<code> </code><b>•  Count:</b> {limit}"
+                f"<code> </code><b>     User:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><b>     Count:</b> {limit}"
             )
 
         for warn_reason in reasons:
@@ -127,11 +127,11 @@ def warn(
 
         reply = (
             f"<code>❕</code><b>Warn Event</b>\n"
-            f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<code> </code><b>•  Count:</b> {num_warns}/{limit}"
+            f"<code> </code><b>     User:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<code> </code><b>     Count:</b> {num_warns}/{limit}"
         )
         if reason:
-            reply += f"\n<code> </code><b>•  Reason:</b> {html.escape(reason)}"
+            reply += f"\n<code> </code><b>     Reason:</b> {html.escape(reason)}"
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
@@ -294,7 +294,7 @@ def warns(update: Update, context: CallbackContext):
                 f"This user has {num_warns}/{limit} warns, for the following reasons:"
             )
             for reason in reasons:
-                text += f"\n • {reason}"
+                text += f"\n     {reason}"
 
             msgs = split_message(text)
             for msg in msgs:
@@ -501,8 +501,8 @@ def set_warn_strength(update: Update, context: CallbackContext):
 
 def __stats__():
     return (
-        f"• {sql.num_warns()} overall warns, across {sql.num_warn_chats()} chats.\n"
-        f"• {sql.num_warn_filters()} warn filters, across {sql.num_warn_filter_chats()} chats."
+        f"    {sql.num_warns()} overall warns, across {sql.num_warn_chats()} chats.\n"
+        f"    {sql.num_warn_filters()} warn filters, across {sql.num_warn_filter_chats()} chats."
     )
 
 
@@ -526,19 +526,19 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- • `/warns <userhandle>`*:* get a user's number, and reason, of warns.
- • `/warnlist`*:* list of all current warning filters
+     `/warns <userhandle>`*:* get a user's number, and reason, of warns.
+     `/warnlist`*:* list of all current warning filters
 
 *Admins only:*
- • `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- • `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
- • `/rmwarn `*:* now you can remove last warn. No need reset.
- • `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
+     `/warn <userhandle>`*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+     `/dwarn <userhandle>`*:* warn a user and delete the message. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+     `/resetwarn <userhandle>`*:* reset the warns for a user. Can also be used as a reply.
+     `/rmwarn `*:* now you can remove last warn. No need reset.
+     `/addwarn <keyword> <reply message>`*:* set a warning filter on a certain keyword. If you want your keyword to \
 be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`. 
- • `/nowarn <keyword>`*:* stop a warning filter
- • `/warnlimit <num>`*:* set the warning limit
- • `/strongwarn <on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
+     `/nowarn <keyword>`*:* stop a warning filter
+     `/warnlimit <num>`*:* set the warning limit
+     `/strongwarn <on/yes/off/no>`*:* If set to on, exceeding the warn limit will result in a ban. Else, will just punch.
 """
 
 __mod_name__ = "Warns"

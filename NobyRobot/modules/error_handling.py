@@ -2,10 +2,10 @@
 Copyright (C) 2017-2019, Paul Larsen
 <<<<<<< HEAD
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Noby007 ]
-Copyright (c) 2022-2023, Programmer • Network, [ https://github.com/Noby007/NobyRobot-3 ]
+Copyright (c) 2022-2023, Programmer     Network, [ https://github.com/Noby007/NobyRobot-3 ]
 =======
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Noby007 ]
-Copyright (c) 2022-2023, Programmer • Network, [https://github.com/Noby007/Nobydayanairobot ]
+Copyright (c) 2022-2023, Programmer     Network, [https://github.com/Noby007/Nobydayanairobot ]
 >>>>>>> e59203a234f3c8d397340ee39d56818beb5ff624
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
@@ -113,7 +113,7 @@ def list_errors(update: Update, context: CallbackContext):
     e = dict(sorted(errors.items(), key=lambda item: item[1], reverse=True))
     msg = "<b>Errors List:</b>\n"
     for x, value in e.items():
-        msg += f"• <code>{x}:</code> <b>{value}</b> #{x.identifier}\n"
+        msg += f"    <code>{x}:</code> <b>{value}</b> #{x.identifier}\n"
     msg += f"{len(errors)} have occurred since startup."
     if len(msg) > 4096:
         with open("errors_msg.txt", "w+") as f:

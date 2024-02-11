@@ -55,12 +55,12 @@ def languages(update: Update, context: CallbackContext) -> None:
 __help__ = """ 
 Use this module to translate stuff!
 *Commands:*
-• /tl (or /tr ): as a reply to a message, translates it to English.
-• /tl <lang>: translates to <lang>
+    /tl (or /tr ): as a reply to a message, translates it to English.
+    /tl <lang>: translates to <lang>
 eg: `/tl ja`: translates to Japanese.
-• /tl <source>//<dest>: translates from <source> to <lang>.
+    /tl <source>//<dest>: translates from <source> to <lang>.
 eg: `/tl ja//en`: translates from Japanese to English.
-• [List of supported languages for translation](https://telegra.ph/Lang-Codes-03-19-3)
+    [List of supported languages for translation](https://telegra.ph/Lang-Codes-03-19-3)
 """
 
 TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], translate, run_async=True)

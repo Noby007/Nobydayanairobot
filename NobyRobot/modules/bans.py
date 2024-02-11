@@ -119,10 +119,10 @@ def ban(update: Update, context: CallbackContext) -> str:
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
             f"<code>❕</code><b>Ban Event</b>\n"
-            f"<code> </code><b>• User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
+            f"<code> </code><b>    User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
         )
         if reason:
-            reply += f"\n<code> </code><b>• Reason:</b> \n{html.escape(reason)}"
+            reply += f"\n<code> </code><b>    Reason:</b> \n{html.escape(reason)}"
 
         bot.sendMessage(
             chat.id,
@@ -225,12 +225,12 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         reply_msg = (
             f"<code>❕</code><b>Temp Banned</b>\n"
             f"<code> </code><b> Chat:</b> <code>{message.chat.title}</code>"
-            f"<code> </code><b>• User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}\n"
-            f"<code> </code><b>• Banned for: {time_val}</b>"
+            f"<code> </code><b>    User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}\n"
+            f"<code> </code><b>    Banned for: {time_val}</b>"
         )
 
         if reason:
-            reply_msg += f"\n<code> </code><b>• Reason:</b> {html.escape(reason)}"
+            reply_msg += f"\n<code> </code><b>    Reason:</b> {html.escape(reason)}"
 
         bot.sendMessage(
             chat.id,
@@ -527,21 +527,21 @@ __mod_name__ = "Bans/Mutes"
 
 __help__ = """
 *User Commands:*
-  • `/kickme`*:* kicks the user who issued the command
+      `/kickme`*:* kicks the user who issued the command
   
 *Admins only:*
-  • `/ban <userhandle>`*:* bans a user. (via handle, or reply)
+      `/ban <userhandle>`*:* bans a user. (via handle, or reply)
   banme
-  • `/sban <userhandle>`*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
-  • `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
-  • `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
-  • `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
-  • `/mute <userhandle>`*:* silences a user. Can also be used as a reply, muting the replied to user.
-  • `/tmute <userhandle> x(m/h/d)`*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
-  • `/unmute <userhandle>`*:* unmutes a user. Can also be used as a reply, muting the replied to user.
-  • `/zombies`*:* searches deleted accounts
-  • `/zombies clean`*:* removes deleted accounts from the group.
-  • `/snipe <chatid> <string>`*:* Make me send a message to a specific chat.
+      `/sban <userhandle>`*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
+      `/tban <userhandle> x(m/h/d)`*:* bans a user for `x` time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+      `/unban <userhandle>`*:* unbans a user. (via handle, or reply)
+      `/kick <userhandle>`*:* kicks a user out of the group, (via handle, or reply)
+      `/mute <userhandle>`*:* silences a user. Can also be used as a reply, muting the replied to user.
+      `/tmute <userhandle> x(m/h/d)`*:* mutes a user for x time. (via handle, or reply). `m` = `minutes`, `h` = `hours`, `d` = `days`.
+      `/unmute <userhandle>`*:* unmutes a user. Can also be used as a reply, muting the replied to user.
+      `/zombies`*:* searches deleted accounts
+      `/zombies clean`*:* removes deleted accounts from the group.
+      `/snipe <chatid> <string>`*:* Make me send a message to a specific chat.
 """
 
 

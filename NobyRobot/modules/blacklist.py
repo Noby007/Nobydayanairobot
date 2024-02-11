@@ -430,7 +430,7 @@ def __chat_settings__(chat_id, user_id):
 
 
 def __stats__():
-    return f"• {sql.num_blacklist_filters()} blacklist triggers, across {sql.num_blacklist_filter_chats()} chats."
+    return f"    {sql.num_blacklist_filters()} blacklist triggers, across {sql.num_blacklist_filter_chats()} chats."
 
 
 __mod_name__ = "Blacklists"

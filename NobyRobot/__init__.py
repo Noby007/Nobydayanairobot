@@ -244,7 +244,7 @@ print(
     "[NobyRobot] NEKO Is Starting. | Programmer Network Project | BSD 2-Clause License."
 )
 print(
-    "[NobyRobot] Mewo Mewo! Successfully Connected With Programmer • Data Center • Chennai"
+    "[NobyRobot] Mewo Mewo! Successfully Connected With Programmer     Data Center     Chennai"
 )
 print(
     "[NobyRobot] Project Maintained By: github.com/Noby007 (https://github.com/Noby007/Nobydayanairobot)"
@@ -283,11 +283,11 @@ aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ("https://thearq.tech", "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ", aiohttpsession)
 print(
-    "[NobyRobot]: Connecting To Programmer • Data Center • Chennai • PostgreSQL Database"
+    "[NobyRobot]: Connecting To Programmer     Data Center     Chennai     PostgreSQL Database"
 )
 # ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 print(
-    "[NobyRobot]: Connecting To Programmer • Neko Userbot (https://telegram.dog/nobyybot"
+    "[NobyRobot]: Connecting To Programmer     Neko Userbot (https://telegram.dog/nobyybot"
 )
 timeout = httpx.Timeout(40)
 http = httpx.AsyncClient(http2=True, timeout=timeout)

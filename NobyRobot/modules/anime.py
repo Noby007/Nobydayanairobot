@@ -513,7 +513,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             for entry in search_result:
                 post_link = "https://animekaizoku.com/" + entry.a["href"]
                 post_name = html.escape(entry.text)
-                result += f"• <a href='{post_link}'>{post_name}</a>\n"
+                result += f"    <a href='{post_link}'>{post_name}</a>\n"
         else:
             more_results = False
             result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKaizoku</code>"
@@ -533,7 +533,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
 
             post_link = entry.a["href"]
             post_name = html.escape(entry.text.strip())
-            result += f"• <a href='{post_link}'>{post_name}</a>\n"
+            result += f"    <a href='{post_link}'>{post_name}</a>\n"
 
     buttons = [[InlineKeyboardButton("See all results", url=search_url)]]
 
@@ -563,18 +563,18 @@ Get information about anime, manga or characters from [AniList](anilist.co).
 
 *Available commands:*
 
- • `/anime <anime>`*:* returns information about the anime.
- • `/character <character>`*:* returns information about the character.
- • `/manga <manga>`*:* returns information about the manga.
- • `/user <user>`*:* returns information about a MyAnimeList user.
- • `/upcoming`*:* returns a list of new anime in the upcoming seasons.
- • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
- • `/kayo <anime>`*:* search an anime on animekayo.com
- • `/airing <anime>`*:* returns anime airing info.
- • `/imdb` <anime/movie name> *:* get IMDb details of the anime or movie
+     `/anime <anime>`*:* returns information about the anime.
+     `/character <character>`*:* returns information about the character.
+     `/manga <manga>`*:* returns information about the manga.
+     `/user <user>`*:* returns information about a MyAnimeList user.
+     `/upcoming`*:* returns a list of new anime in the upcoming seasons.
+     `/kaizoku <anime>`*:* search an anime on animekaizoku.com
+     `/kayo <anime>`*:* search an anime on animekayo.com
+     `/airing <anime>`*:* returns anime airing info.
+     `/imdb` <anime/movie name> *:* get IMDb details of the anime or movie
 
-• *Anime Fun:*
- • `/aq` *:* get random anime quotes
+    *Anime Fun:*
+     `/aq` *:* get random anime quotes
 
  """
 
