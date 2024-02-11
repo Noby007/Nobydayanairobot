@@ -5,8 +5,11 @@ import pyrate_limiter
 BucketFullException = pyrate_limiter.BucketFullException
 Duration = pyrate_limiter.Duration
 Limiter = pyrate_limiter.Limiter
-MemoryListBucket = pyrate_limiter.MemoryListBucket
+MemoryBucket = pyrate_limiter.MemoryBucket  # Using MemoryBucket instead of MemoryListBucket
 RequestRate = pyrate_limiter.RequestRate
+
+# Your code can then use MemoryBucket as needed
+
 
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
