@@ -1,4 +1,4 @@
-<img src='![image](https://github.com/Noby007/Nobydayanairobot/assets/87512608/a269edb2-c7ef-49ed-b021-e4da7c318361)
+![image](https://github.com/Noby007/Nobydayanairobot/assets/87512608/a269edb2-c7ef-49ed-b021-e4da7c318361)
 ' alternate="Meow Meow... Your Internet Gones..." height="250px">
 
 # 𝐍𝐞𝐤𝐨 𝐑𝐨𝐛𝐨𝐭 [ BETA ]
