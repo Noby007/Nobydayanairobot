@@ -302,7 +302,7 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
     else:
         return False
 
-
+"""
 CONN_HELP = 
 Actions which are available with connected groups:-
 *User Actions:*
@@ -321,7 +321,7 @@ Actions which are available with connected groups:-
      Set Locks and Unlocks in chat.
      Enable and Disable commands in chat.
      Export and Imports of chat backup.
-     More in future!
+     More in future!"""
 
 
 
