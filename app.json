@@ -9,7 +9,7 @@
          "manager",
          "NobyRobot"
       ],   
-   "repository": "https://github.com/Awesome-Prince/NobyRobot-3",
+   "repository": "https://github.com/Noby007/Nobydayanairobot",
    "addons": [
       {
          "options": {
@@ -47,12 +47,12 @@
       "BOT_NAME": {
          "description": "Your Bot Name.",
          "required": true,
-         "value": "Neko X"
+         "value": "Noby (An humanoid robot )"
       },
       "BOT_USERNAME": {
          "description": "Your Bot UserName Without @.",
          "required": true,
-         "value": "NekoCuteBot"
+         "value": "nobyybot"
       },
       "ERROR_LOGS": {
          "description": "Error Logs (Channel Ya Group Choice Is Yours)",
@@ -67,16 +67,16 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "5629305049"
+         "value": "5115485603"
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "Its_IZ_PRINCE_xD"
+         "value": "nobygod"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
          "required": true,
-         "value": "Besties_XD"
+         "value": "ndbotsupport"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -158,7 +158,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it",
          "required": false,
-         "value": "t.me/Its_IZ_PRINCE_xD"
+         "value": "t.me/nobygod"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
