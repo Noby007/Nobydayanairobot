@@ -5,11 +5,10 @@ import pyrate_limiter
 BucketFullException = pyrate_limiter.BucketFullException
 Duration = pyrate_limiter.Duration
 Limiter = pyrate_limiter.Limiter
-MemoryBucket = pyrate_limiter.MemoryBucket  # Using MemoryBucket instead of MemoryListBucket
+MemoryBucket = pyrate_limiter.MemoryBucket  # Corrected from MemoryListBucket
 RequestRate = pyrate_limiter.RequestRate
 
 # Your code can then use MemoryBucket as needed
-
 
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
@@ -18,7 +17,6 @@ import NobyRobot.modules.sql.blacklistusers_sql as sql
 from NobyRobot import ALLOW_EXCL, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES
 
 CMD_STARTERS = ("/", "!") if ALLOW_EXCL else ("/",)
-
 
 class AntiSpam:
     def __init__(self):
@@ -40,7 +38,7 @@ class AntiSpam:
             self.min_limit,
             self.hour_limit,
             self.daily_limit,
-            bucket_class=MemoryListBucket,
+            bucket_class=MemoryBucket,  # Corrected from MemoryListBucket
         )
 
     def check_user(self, user):
@@ -55,10 +53,8 @@ class AntiSpam:
         except BucketFullException:
             return True
 
-
 SpamChecker = AntiSpam()
 MessageHandlerChecker = AntiSpam()
-
 
 class CustomCommandHandler(CommandHandler):
     def __init__(self, command, callback, admin_ok=False, allow_edit=False, **kwargs):
@@ -119,11 +115,9 @@ class CustomCommandHandler(CommandHandler):
             if isinstance(check_result[1], dict):
                 context.update(check_result[1])
 
-
 class CustomRegexHandler(RegexHandler):
     def __init__(self, pattern, callback, friendly="", **kwargs):
         super().__init__(pattern, callback, **kwargs)
-
 
 class CustomMessageHandler(MessageHandler):
     def __init__(self, filters, callback, friendly="", allow_edit=False, **kwargs):
@@ -133,6 +127,6 @@ class CustomMessageHandler(MessageHandler):
                 Filters.update.edited_message | Filters.update.edited_channel_post
             )
 
-        def check_update(self, update):
-            if isinstance(update, Update) and update.effective_message:
-                return self.filters(update)
+    def check_update(self, update):
+        if isinstance(update, Update) and update.effective_message:
+            return self.filters(update)
