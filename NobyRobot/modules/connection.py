@@ -321,7 +321,7 @@ Actions which are available with connected groups:-
      Set Locks and Unlocks in chat.
      Enable and Disable commands in chat.
      Export and Imports of chat backup.
-     More in future!"""
+     More in future!
 
 
 
