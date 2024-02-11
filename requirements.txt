@@ -61,7 +61,6 @@ Pillow==9.3.0
 CurrencyConverter
 googletrans==4.0.0-rc1
 google_trans_new
-pyrate-limiter.py
 python-arq==6.0.5
 hachoir
 configparser
