@@ -236,7 +236,7 @@ print(
     "[NobyRobot] Mewo Mewo! Successfully Connected With Programmer • Data Center • Chennai"
 )
 print(
-    "[NobyRobot] Project Maintained By: github.com/Awesome-Prince (https://github.com/Noby007/NobyRobot-3)"
+    "[NobyRobot] Project Maintained By: github.com/Noby007 (https://github.com/Noby007/Nobydayanairobot)"
 )
 
 print("[NobyRobot]: Telegraph Installing")
@@ -276,7 +276,7 @@ print(
 )
 # ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 print(
-    "[NobyRobot]: Connecting To Programmer • Neko Userbot (https://telegram.dog/Awesome_Neko)"
+    "[NobyRobot]: Connecting To Programmer • Neko Userbot (https://telegram.dog/nobyybot"
 )
 timeout = httpx.Timeout(40)
 http = httpx.AsyncClient(http2=True, timeout=timeout)
