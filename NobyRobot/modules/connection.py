@@ -2,10 +2,10 @@
 Copyright (C) 2017-2019, Paul Larsen
 <<<<<<< HEAD
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Noby007 ]
-Copyright (c) 2022-2023, Programmer • Network, [ https://github.com/Noby007/NobyRobot-3 ]
+Copyright (c) 2022-2023, Programmer • Network, [ https://github.com/Noby007/Nobydayanairobot ]
 =======
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Noby007 ]
-Copyright (c) 2022-2023, Programmer • Network, [https://github.com/Noby007/Nobydayanairobot ]
+Copyright (c) 2022-2023, Programmer  Network, [https://github.com/Noby007/Nobydayanairobot ]
 >>>>>>> e59203a234f3c8d397340ee39d56818beb5ff624
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
