@@ -38,6 +38,16 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     )
     sys.exit(1)
 
+async def main():
+    async with aiohttp.ClientSession() as aiohttpsession:
+        # Your main code here...
+        # Don't forget to include the `aiohttpsession` in the arguments of the functions that use it
+
+        # Close the aiohttp session at the end of the main function
+        await aiohttpsession.close()
+
+# Run the main coroutine
+asyncio.run(main())
 
 ENV = bool(os.environ.get("ENV", False))
 
