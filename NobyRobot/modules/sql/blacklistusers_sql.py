@@ -1,5 +1,4 @@
-"""
-BSD 2-Clause License
+ 
 Copyright (C) 2017-2019, Paul Larsen
 <<<<<<< HEAD
 Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Noby007]
