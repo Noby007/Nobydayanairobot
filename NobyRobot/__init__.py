@@ -9,6 +9,7 @@ import aiohttp
 import httpx
 import spamwatch
 import telegram.ext as tg
+from pyrogram.types import Chat
 from aiohttp import ClientSession
 from httpx import AsyncClient, Timeout
 from pyrogram import Client
