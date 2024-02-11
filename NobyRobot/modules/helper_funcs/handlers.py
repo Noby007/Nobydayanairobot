@@ -5,8 +5,10 @@ import pyrate_limiter
 BucketFullException = pyrate_limiter.BucketFullException
 Duration = pyrate_limiter.Duration
 Limiter = pyrate_limiter.Limiter
-MemoryBucket = pyrate_limiter.MemoryBucket  # Corrected from MemoryListBucket
+InMemoryBucket = pyrate_limiter.InMemoryBucket  # Using InMemoryBucket instead of MemoryBucket
 RequestRate = pyrate_limiter.RequestRate
+
+# Your code can then use InMemoryBucket as needed
 
 # Your code can then use MemoryBucket as needed
 
