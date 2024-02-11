@@ -48,7 +48,7 @@ async def main():
 
 # Run the main coroutine
 if __name__ == "__main__":
-asyncio.run(main())
+    asyncio.run(main())
 
 ENV = bool(os.environ.get("ENV", False))
 
